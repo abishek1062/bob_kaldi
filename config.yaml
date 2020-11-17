@@ -1,0 +1,45 @@
+dirs:
+    voxceleb1_path : './voxceleb1_files'
+    mfcc_path : './voxceleb1_spkr_MFCCs_v1/'
+
+model_files:
+    diag_GMM-UBM : './model_files/diag_GMM-UBM_v1.model'
+    full_GMM-UBM : './model_files/full_GMM-UBM_v1.model'
+    iVector : './model_files/iVector_v1.model'
+    plda_mean : './model_files/plda_global_mean_v1.model'
+    trained_plda : './model_files/trained_plda_v1.model'
+
+
+speech_params:
+    frame_length : 0.025
+    frame_overlap : 0.010
+    smooth_window : 1.0
+    sil_rem_wt : 0.3
+    sil_rem_plt : False
+    sample_rate : 16000
+    bits_per_sample : 16
+
+diag_gmm_ubm_params:
+    no_of_spkrs : 5
+    num_threads : 10
+    min_gaussian_weight : 0.0001
+    num_gauss : 2048 
+    num_gauss_init : 0 
+    num_gselect : 30 
+    num_iters_init : 20 
+    num_iters : 4
+    remove_low_count_gaussians : True
+
+full_gmm_ubm_params:
+    num_gselect : 30
+    num_iters : 4
+    min_gaussian_weight : 0.0001
+
+iVector_params:
+    num_gselect : 20
+    ivector_dim : 600
+    use_weights : False
+    num_iters : 5
+    min_post : 0.025
+    num_samples_for_weights : 3
+    posterior_scale : 1.0   
